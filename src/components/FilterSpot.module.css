@@ -1,0 +1,7 @@
+.buttons{
+text-align: center;
+}
+
+@media (max-width: 990px) {
+   .buttons{display: none;}
+}
