@@ -7,10 +7,6 @@ import Contact from "./pages/Contact";
 import Navi from "./components/Navi";
 
 function App() {
-  const submitHandler = (name, email, description) => {
-    const obj = { name: name, email: email, description: description };
- 
-    console.log(obj) };
 
   return (
     <>
@@ -21,7 +17,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route
             path="/contact"
-            element={<Contact onAddForm={submitHandler} />}
+            element={<Contact  />}
           />
         </Routes>
       </BrowserRouter>
