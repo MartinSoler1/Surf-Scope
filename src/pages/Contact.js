@@ -9,13 +9,15 @@ const Contact = (props) => {
   const submitHandler = async (event) => {
     event.preventDefault();
     const enquiry = { name: name, email: email, description: description };
-    
-    
-    try{const res = await axios.post(
-      "https://surf-spots-b42a4-default-rtdb.firebaseio.com/posts.json",
-      enquiry
-    );}
-    catch(error){console.log(error.response.data)}
+
+    try {
+      const res = await axios.post(
+        "https://surf-spots-b42a4-default-rtdb.firebaseio.com/posts.json",
+        enquiry
+      );
+    } catch (error) {
+      console.log(error.response.data);
+    }
 
     if (name.trim().length < 5 || email.trim().length === 0) {
       alert("Please entered a valid name (> 5 characters).");
