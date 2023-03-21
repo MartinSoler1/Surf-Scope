@@ -1,21 +1,60 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import FilterSpot from "../components/FilterSpot";
 import SpotList from "../components/SpotList";
-import {spots} from '../surf-spots-app/spotsDb'
+import axios from "axios";
+import LoadingIndicator from "../components/UI/LoadingIndicator";
+
 const Home = () => {
+  const [spots, setSpots] = useState([]);
+  const [filteredSpots, setFilteredSpots] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-  console.log(spots)
-  const [spot, setSpot] = useState(spots);
+  const fetchData = useCallback(async () => {
+    try {
+      setIsLoading(true);
+      const response = await axios.get(
+        "https://surf-scope-default-rtdb.firebaseio.com/spots.json"
+      );
+      const data = await response.data;
+      setIsLoading(false);
 
+      const loadedSpots = [];
+
+      for (const key in data) {
+        loadedSpots.push({
+          id: key,
+          location: data[key].location,
+          foot: data[key].foot,
+          continent: data[key].continent,
+          description: data[key].description,
+          img: data[key].img,
+        });
+      }
+      setSpots(loadedSpots);
+      setFilteredSpots(loadedSpots);
+    } catch (err) {
+      if (err.response) {
+        console.error(err.response.data);
+        console.error(err.response.status);
+        console.error(err.response.headers);
+      } else if (err.request) {
+        console.error(err.request);
+      } else {
+        console.log("ERROR", err.message);
+      }
+    }
+  }, []);
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   const filterplaces = (bttn) => {
-    const filter = spots.filter((place) => place.continent === bttn);
-    setSpot(filter)
+    setFilteredSpots(spots.filter((place) => place.continent === bttn));
   };
   return (
     <div>
       <FilterSpot bttnClicked={filterplaces} />
-      <SpotList spot={spot} />
+      {isLoading ? <LoadingIndicator /> : <SpotList spots={filteredSpots} />}
     </div>
   );
 };

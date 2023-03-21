@@ -1,13 +1,13 @@
 import React from 'react'
-import Component from './Component'
+import Spot from './Spot'
 
 
 const SpotList = (props) => {
 
   return (
     <div> <ul className="list-unstyled m-4">
-        { props.spot.map((x) => (
-          <Component
+        { props.spots.map((x) => (
+          <Spot
             key={x.id}
             img={x.img}
             foot={x.foot}

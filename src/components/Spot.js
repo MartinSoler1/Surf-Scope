@@ -1,8 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import classes from "./component.module.css";
+import classes from "./Spot.module.css";
 
-const Component = (props) => {
+const Spot = (props) => {
   return (
     <li className="media" key={props.id}>
       <div className="card mb-3">
@@ -19,4 +19,4 @@ const Component = (props) => {
   );
 };
 
-export default Component;
+export default Spot;
