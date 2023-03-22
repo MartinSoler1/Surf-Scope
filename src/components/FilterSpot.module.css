@@ -8,10 +8,19 @@
   }
 }
 
+.world {
+  position: relative;
+  cursor: pointer;
+
+}
+
 img {
   height: 70px;
   width: 70px;
   cursor: pointer;
-  margin-top: -1rem;
-  margin-left: -1rem;
+}
+
+.world p {margin: -0.7rem;
+  font-size: 0.8rem;
+  font-weight: 700;
 }

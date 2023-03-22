@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
         <Navi />
         <Routes>
-          <Route path="/spots" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route
             path="/contact"

@@ -23,7 +23,7 @@ const Navi = () => {
           <Nav className="ms-auto">
             <Link
               className="text-decoration-none text-white h4 p-3"
-              to="/spots"
+              to="/"
             >
               Home
             </Link>

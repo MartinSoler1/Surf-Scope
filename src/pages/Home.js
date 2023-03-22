@@ -49,9 +49,8 @@ const Home = () => {
 
   const filterplaces = (bttn) => {
     if (bttn === " ") {
-      setFilteredSpots(spots.filter((place) => place.continent !== bttn));
-    } 
-    else {
+      setFilteredSpots(spots);
+    } else {
       setFilteredSpots(spots.filter((place) => place.continent === bttn));
     }
   };
