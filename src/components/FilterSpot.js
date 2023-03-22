@@ -41,7 +41,7 @@ const FilterSpot = (props) => {
         Oceania
       </button>
       <div>
-        <img src={WorldImg} onClick={() => props.bttnClicked(" ")} />
+        <img src={WorldImg} alt="planet icon" onClick={() => props.bttnClicked(" ")} />
       </div>
     </div>
   );
