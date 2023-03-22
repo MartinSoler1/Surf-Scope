@@ -1,7 +1,17 @@
-.buttons{
-text-align: center;
+.buttons {
+  text-align: center;
 }
 
 @media (max-width: 990px) {
-   .buttons{display: none;}
+  .buttons {
+    display: none;
+  }
+}
+
+img {
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+  margin-top: -1rem;
+  margin-left: -1rem;
 }

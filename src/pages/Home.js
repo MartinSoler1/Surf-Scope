@@ -19,7 +19,6 @@ const Home = () => {
       setIsLoading(false);
 
       const loadedSpots = [];
-
       for (const key in data) {
         loadedSpots.push({
           id: key,
@@ -49,11 +48,17 @@ const Home = () => {
   }, [fetchData]);
 
   const filterplaces = (bttn) => {
-    setFilteredSpots(spots.filter((place) => place.continent === bttn));
+    if (bttn === " ") {
+      setFilteredSpots(spots.filter((place) => place.continent !== bttn));
+    } 
+    else {
+      setFilteredSpots(spots.filter((place) => place.continent === bttn));
+    }
   };
+
   return (
     <div>
-      <FilterSpot bttnClicked={filterplaces} />
+      <FilterSpot bttnClicked={filterplaces} spots={spots} />
       {isLoading ? <LoadingIndicator /> : <SpotList spots={filteredSpots} />}
     </div>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./FilterSpot.module.css";
+import WorldImg from "./../pictures/WorldImg.jpeg";
 
 const FilterSpot = (props) => {
   return (
@@ -39,6 +40,9 @@ const FilterSpot = (props) => {
       >
         Oceania
       </button>
+      <div>
+        <img src={WorldImg} onClick={() => props.bttnClicked(" ")} />
+      </div>
     </div>
   );
 };

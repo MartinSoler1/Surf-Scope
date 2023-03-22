@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import classes from "./AboutUsCard.module.css";
-import rick from "./../staff-cards/rick.jpeg";
-import bugs from "./../staff-cards/bugs.jpeg";
+import rick from "./../pictures/rick.jpeg";
+import bugs from "./../pictures/bugs.jpeg";
 
 const AboutUsCards = () => {
   return (
