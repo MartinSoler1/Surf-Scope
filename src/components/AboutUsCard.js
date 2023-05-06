@@ -5,15 +5,11 @@ import bugs from "./../pictures/bugs.jpeg";
 
 const AboutUsCards = () => {
   return (
-    <Fragment>
-        <h2 className="text-center mt-5">Meet the crew that works for you..</h2>
+    <>
+      <h2 className="text-center mt-5">Meet the crew that works for you..</h2>
       <div className={classes.cards}>
         <div className="card mx-auto" style={{ width: 290 }}>
-          <img
-            src={rick}
-            className={classes.profile}
-            alt="rick-sanchez"
-          />
+          <img src={rick} className={classes.profile} alt="rick-sanchez" />
           <div className="card-body">
             <h5 className="card-title  text-center">Richard Daniel Sanchez</h5>
             <p className="text-uppercase text-center role">
@@ -24,22 +20,38 @@ const AboutUsCards = () => {
             <div>
               <ul className="list-inline">
                 <li className="list-inline-item">
-                  <a href="https://github.com/" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://github.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <i className="fab fa-github text-dark"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
-                  <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <i className="fab fa-linkedin-in  text-dark"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
-                  <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <i className="fab fa-instagram  text-dark"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
-                  <a href="https://twitter.com/" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://twitter.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <i className="fab fa-twitter  text-dark"></i>
                   </a>
                 </li>
@@ -57,22 +69,38 @@ const AboutUsCards = () => {
             <div>
               <ul className="list-inline">
                 <li className="list-inline-item">
-                  <a href="https://github.com/" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://github.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <i className="fab fa-github  text-dark"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
-                  <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <i className="fab fa-linkedin-in  text-dark"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
-                  <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <i className="fab fa-instagram  text-dark"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
-                  <a href="https://twitter.com/" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://twitter.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <i className="fab fa-twitter  text-dark"></i>
                   </a>
                 </li>
@@ -81,7 +109,7 @@ const AboutUsCards = () => {
           </div>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 };
 

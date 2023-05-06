@@ -4,12 +4,12 @@ import AboutUsCard from "../components/AboutUsCard";
 const About = () => {
   return (
     <div className="m-4">
-      <p className="mt-4">
+      <p className="mt-4 fs-4">
         <strong>
           Like you, we had no idea who to trust for travel advice.
         </strong>
       </p>
-      <p>
+      <span className="lh-lg fw-normal">
         That’s why we made Surf scope, a travel site written by real experts,
         not anonymous reviewers. Our writers are locals with hometown pride,
         parents who are road trip heroes, cruise junkies who know every ship at
@@ -20,9 +20,10 @@ const About = () => {
         inspiration from destinations around the world. Surf scope has been
         honored by multiple awards since its inception, including the Eppy
         Awards, the W3 Awards, and the Communicator Awards.
-      </p>
+      </span>
       <br />
-      <span>
+      <br />
+      <span className="lh-lg fw-normal">
         Here are three principles that guide our coverage: Accuracy and
         integrity: We rigorously vet and update each article on the site using
         our staff and an army of freelance travel editors. Additionally, we
@@ -37,7 +38,8 @@ const About = () => {
         where to find the best croissant and everything in between.
       </span>
       <div>
-      <AboutUsCard/></div>
+        <AboutUsCard />
+      </div>
     </div>
   );
 };
