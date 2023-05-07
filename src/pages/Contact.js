@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 const Contact = (props) => {
@@ -9,21 +9,19 @@ const Contact = (props) => {
   const submitHandler = async (event) => {
     event.preventDefault();
     const enquiry = { name: name, email: email, description: description };
-
-    try {
-      const res = await axios.post(
-        "https://surf-spots-b42a4-default-rtdb.firebaseio.com/posts.json",
-        enquiry
-      );
-    } catch (error) {
-      console.log(error.response.data);
-    }
-
     if (name.trim().length < 5 || email.trim().length === 0) {
       alert("Please entered a valid name (> 5 characters).");
       return;
+    } else {
+      try {
+        const res = await axios.post(
+          "https://surf-spots-b42a4-default-rtdb.firebaseio.com/posts.json",
+          enquiry
+        );
+      } catch (error) {
+        console.log(error.response.data);
+      }
     }
-
     setName("");
     setEmail("");
     setDescription("");
@@ -42,20 +40,26 @@ const Contact = (props) => {
   };
 
   return (
-    <Fragment>
+    <>
       <div className="container py-4">
         <div className="mt-2">
-          <p>
+          <span>
             Reach us by phone <b>+54 9 11 3439 1850</b> between 9am and 5pm
             (AEST) Monday to Friday or anytime by email{" "}
             <a href="mailto:info@surfspots.com"> info@surfspots.com</a>.
-          </p>
-          The surf scope agency is located at{" "}
-          <b> Irigoyen 2023, Mar del Plata.</b> <p />
-          <p>
+          </span>
+          <br />
+          <br />
+          <span>
+            The surf scope agency is located at
+            <b> Irigoyen 2023, Mar del Plata.</b>
+          </span>
+          <br />
+          <br />
+          <span>
             For more inquires leave us a message and our staff will contact you
             as soon as possible.
-          </p>
+          </span>
         </div>
         <form id="contactForm" onSubmit={submitHandler}>
           <div className="mb-3">
@@ -100,7 +104,7 @@ const Contact = (props) => {
 
           <div className="d-grid">
             <button
-              className="btn btn-primary btn-lg "
+              className="btn btn-primary btn-lg"
               id="submitButton"
               type="submit"
             >
@@ -109,7 +113,7 @@ const Contact = (props) => {
           </div>
         </form>
       </div>
-    </Fragment>
+    </>
   );
 };
 

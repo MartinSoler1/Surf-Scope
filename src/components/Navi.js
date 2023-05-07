@@ -21,10 +21,7 @@ const Navi = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-            <Link
-              className="text-decoration-none text-white h4 p-3"
-              to="/"
-            >
+            <Link className="text-decoration-none text-white h4 p-3" to="/">
               Home
             </Link>
             <Link
