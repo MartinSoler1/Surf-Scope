@@ -18,6 +18,7 @@ const Contact = (props) => {
           "https://surf-spots-b42a4-default-rtdb.firebaseio.com/posts.json",
           enquiry
         );
+        console.log(res);
       } catch (error) {
         console.log(error.response.data);
       }

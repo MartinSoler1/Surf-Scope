@@ -28,7 +28,7 @@ const FilterSpot = (props) => {
       </button>
       <button
         type="button"
-        className="btn btn-dark btn-lg btn-floating m-5  fw-bold"
+        className="btn btn-dark btn-lg btn-floating m-5 fw-bold"
         onClick={() => props.bttnClicked("Africa")}
       >
         Africa
@@ -41,7 +41,7 @@ const FilterSpot = (props) => {
         Oceania
       </button>
       <div className={classes.world} onClick={() => props.bttnClicked(" ")}>
-        <img src={WorldImg} alt="planet icon"  />
+        <img src={WorldImg} alt="planet icon" />
         <p>Clear filters</p>
       </div>
     </div>

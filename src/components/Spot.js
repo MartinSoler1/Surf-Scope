@@ -4,7 +4,7 @@ import classes from "./Spot.module.css";
 
 const Spot = (props) => {
   return (
-    <li className="media" key={props.id}>
+    <li key={props.id}>
       <div className="card mb-3">
         <figure className={classes.fig}>
           <img src={props.img} className={classes.img} alt="..." />

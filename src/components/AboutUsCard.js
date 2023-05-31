@@ -8,7 +8,7 @@ const AboutUsCards = () => {
     <>
       <h2 className="text-center mt-5">Meet the crew that works for you..</h2>
       <div className={classes.cards}>
-        <div className="card mx-auto" style={{ width: 290 }}>
+        <div className="card mx-auto m-3" style={{ width: 290 }}>
           <img src={rick} className={classes.profile} alt="rick-sanchez" />
           <div className="card-body">
             <h5 className="card-title  text-center">Richard Daniel Sanchez</h5>
@@ -59,7 +59,7 @@ const AboutUsCards = () => {
             </div>
           </div>
         </div>
-        <div className="card mx-auto " style={{ width: 290 }}>
+        <div className="card mx-auto m-3" style={{ width: 290 }}>
           <img src={bugs} className={classes.profile} alt="bags-bunny" />
           <div className="card-body">
             <h5 className="card-title  text-center">Bugs Bunny</h5>

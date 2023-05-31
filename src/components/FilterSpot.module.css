@@ -11,16 +11,15 @@
 .world {
   position: relative;
   cursor: pointer;
-
 }
 
 img {
   height: 70px;
   width: 70px;
-  cursor: pointer;
 }
 
-.world p {margin: -0.7rem;
+.world p {
+  margin: 0rem;
   font-size: 0.8rem;
   font-weight: 700;
 }

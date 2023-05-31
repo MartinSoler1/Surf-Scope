@@ -1,12 +1,11 @@
-import React from 'react'
-import Spot from './Spot'
-
+import React from "react";
+import Spot from "./Spot";
 
 const SpotList = (props) => {
-
   return (
-    <div> <ul className="list-unstyled m-4">
-        { props.spots.map((x) => (
+    <div>
+      <ul className="list-unstyled my-4">
+        {props.spots.map((x) => (
           <Spot
             key={x.id}
             img={x.img}
@@ -15,8 +14,9 @@ const SpotList = (props) => {
             description={x.description}
           />
         ))}
-      </ul></div>
-  )
-}
+      </ul>
+    </div>
+  );
+};
 
-export default SpotList
+export default SpotList;

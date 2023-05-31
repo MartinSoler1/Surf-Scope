@@ -7,10 +7,10 @@ import Navbar from "react-bootstrap/Navbar";
 const Navi = () => {
   return (
     <Navbar
-      className="navbar navbar-light p-3"
+      className="navbar navbar-light pt-3 px-3"
       collapseOnSelect
       expand="lg"
-      bg="dark"
+      bg="dark "
       variant="dark"
     >
       <Container>
